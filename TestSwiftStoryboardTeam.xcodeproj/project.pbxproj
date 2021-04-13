@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		1F4457D72625D85400E097FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4457D52625D85400E097FC /* Main.storyboard */; };
 		1F4457D92625D85700E097FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4457D82625D85700E097FC /* Assets.xcassets */; };
 		1F4457DC2625D85700E097FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4457DA2625D85700E097FC /* LaunchScreen.storyboard */; };
+		1F4457F82625E20800E097FC /* HomeTurf.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4457F72625E20800E097FC /* HomeTurf.plist */; };
+		1FC10F8A26263F4C0067B396 /* TeamHomeTurfAuth0Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC10F8926263F4C0067B396 /* TeamHomeTurfAuth0Service.swift */; };
+		80C70F02CB29ED5D3E73DF94 /* Pods_TestSwiftStoryboardTeam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B114B09FE9C5B743132876 /* Pods_TestSwiftStoryboardTeam.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,12 @@
 		1F4457D82625D85700E097FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F4457DB2625D85700E097FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F4457DD2625D85700E097FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F4457E82625DA8E00E097FC /* HomeTurf.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = HomeTurf.xcframework; path = Pods/HomeTurf/HomeTurf.xcframework; sourceTree = "<group>"; };
+		1F4457F72625E20800E097FC /* HomeTurf.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeTurf.plist; sourceTree = "<group>"; };
+		1FC10F8926263F4C0067B396 /* TeamHomeTurfAuth0Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamHomeTurfAuth0Service.swift; sourceTree = "<group>"; };
+		36B114B09FE9C5B743132876 /* Pods_TestSwiftStoryboardTeam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestSwiftStoryboardTeam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EA49A28DD0F7F11F9BD0E51 /* Pods-TestSwiftStoryboardTeam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSwiftStoryboardTeam.release.xcconfig"; path = "Target Support Files/Pods-TestSwiftStoryboardTeam/Pods-TestSwiftStoryboardTeam.release.xcconfig"; sourceTree = "<group>"; };
+		E3A55E43E669DE6DFF5D1279 /* Pods-TestSwiftStoryboardTeam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSwiftStoryboardTeam.debug.xcconfig"; path = "Target Support Files/Pods-TestSwiftStoryboardTeam/Pods-TestSwiftStoryboardTeam.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80C70F02CB29ED5D3E73DF94 /* Pods_TestSwiftStoryboardTeam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,8 @@
 			children = (
 				1F4457CE2625D85400E097FC /* TestSwiftStoryboardTeam */,
 				1F4457CD2625D85400E097FC /* Products */,
+				55FB57FE2D2949079B70736B /* Pods */,
+				F9A7A727065D681DC6588838 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +68,7 @@
 		1F4457CE2625D85400E097FC /* TestSwiftStoryboardTeam */ = {
 			isa = PBXGroup;
 			children = (
+				1F4457F72625E20800E097FC /* HomeTurf.plist */,
 				1F4457CF2625D85400E097FC /* AppDelegate.swift */,
 				1F4457D12625D85400E097FC /* SceneDelegate.swift */,
 				1F4457D32625D85400E097FC /* ViewController.swift */,
@@ -63,8 +76,27 @@
 				1F4457D82625D85700E097FC /* Assets.xcassets */,
 				1F4457DA2625D85700E097FC /* LaunchScreen.storyboard */,
 				1F4457DD2625D85700E097FC /* Info.plist */,
+				1FC10F8926263F4C0067B396 /* TeamHomeTurfAuth0Service.swift */,
 			);
 			path = TestSwiftStoryboardTeam;
+			sourceTree = "<group>";
+		};
+		55FB57FE2D2949079B70736B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3A55E43E669DE6DFF5D1279 /* Pods-TestSwiftStoryboardTeam.debug.xcconfig */,
+				7EA49A28DD0F7F11F9BD0E51 /* Pods-TestSwiftStoryboardTeam.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F9A7A727065D681DC6588838 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F4457E82625DA8E00E097FC /* HomeTurf.xcframework */,
+				36B114B09FE9C5B743132876 /* Pods_TestSwiftStoryboardTeam.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F4457E02625D85700E097FC /* Build configuration list for PBXNativeTarget "TestSwiftStoryboardTeam" */;
 			buildPhases = (
+				C183704697E8663F21D04D4F /* [CP] Check Pods Manifest.lock */,
 				1F4457C82625D85400E097FC /* Sources */,
 				1F4457C92625D85400E097FC /* Frameworks */,
 				1F4457CA2625D85400E097FC /* Resources */,
+				836E50D223A2978D820B75A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,11 +160,54 @@
 			files = (
 				1F4457DC2625D85700E097FC /* LaunchScreen.storyboard in Resources */,
 				1F4457D92625D85700E097FC /* Assets.xcassets in Resources */,
+				1F4457F82625E20800E097FC /* HomeTurf.plist in Resources */,
 				1F4457D72625D85400E097FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		836E50D223A2978D820B75A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestSwiftStoryboardTeam/Pods-TestSwiftStoryboardTeam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestSwiftStoryboardTeam/Pods-TestSwiftStoryboardTeam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestSwiftStoryboardTeam/Pods-TestSwiftStoryboardTeam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C183704697E8663F21D04D4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestSwiftStoryboardTeam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1F4457C82625D85400E097FC /* Sources */ = {
@@ -138,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F4457D42625D85400E097FC /* ViewController.swift in Sources */,
+				1FC10F8A26263F4C0067B396 /* TeamHomeTurfAuth0Service.swift in Sources */,
 				1F4457D02625D85400E097FC /* AppDelegate.swift in Sources */,
 				1F4457D22625D85400E097FC /* SceneDelegate.swift in Sources */,
 			);
@@ -283,11 +361,16 @@
 		};
 		1F4457E12625D85700E097FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3A55E43E669DE6DFF5D1279 /* Pods-TestSwiftStoryboardTeam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T7L7QL7A7;
+				HEADER_SEARCH_PATHS = (
+					"$(SOURCE_ROOT)/Pods/**/**",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = TestSwiftStoryboardTeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,11 +385,16 @@
 		};
 		1F4457E22625D85700E097FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EA49A28DD0F7F11F9BD0E51 /* Pods-TestSwiftStoryboardTeam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T7L7QL7A7;
+				HEADER_SEARCH_PATHS = (
+					"$(SOURCE_ROOT)/Pods/**/**",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = TestSwiftStoryboardTeam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

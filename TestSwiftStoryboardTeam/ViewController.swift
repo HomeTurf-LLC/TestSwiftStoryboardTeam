@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import HomeTurf
 
 class ViewController: UIViewController {
 
@@ -14,6 +15,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func navigateToHomeTurf(_ sender: Any) {
+        let webViewVC = HomeTurfWebViewController.init()
+        let auth0Service = TeamHomeTurfAuth0Service.init()
+        webViewVC.setAuth0Service(customService: auth0Service)
+        self.navigationController?.pushViewController(webViewVC, animated: false)
+    }
 }
 
