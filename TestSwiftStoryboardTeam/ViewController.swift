@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBAction func navigateToHomeTurf(_ sender: Any) {
         let webViewVC = HomeTurfWebViewController.init()
         let auth0Service = TeamHomeTurfAuth0Service.init()
-        webViewVC.setAuth0Service(customService: auth0Service)
+        webViewVC.setAuth0Service(auth0Service: auth0Service)
         self.navigationController?.pushViewController(webViewVC, animated: false)
     }
 }
