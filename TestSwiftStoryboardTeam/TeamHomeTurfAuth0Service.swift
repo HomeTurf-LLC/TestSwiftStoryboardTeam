@@ -1,14 +1,12 @@
 //
 //  TeamHomeTurfAuth0Service.swift
-//  TestTeamApp
-//
 //
 
 import Auth0
 import Foundation
 import HomeTurf
 
-final class TeamHomeTurfAuth0Service: BaseAuth0Service {
+final class TeamHomeTurfAuth0Service: HomeTurfBaseAuth0Service {
     var javascriptService: HomeTurfJavascriptService? = nil
     var audience: String? = nil
     var clientId: String? = nil
