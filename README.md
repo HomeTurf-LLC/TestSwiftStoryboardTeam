@@ -1,7 +1,7 @@
 # TestSwiftStoryboardTeam
 Test Swift storyboard team app
 
-# Swift Storyboard Setup
+# Setup
 
 See the [HomeTurfPodSpecs](https://github.com/HomeTurf-LLC/HomeTurfPodSpecs) for project requirements and cocoapod setup instructions. The following instructions assume you have already added/updated a Podfile, run `pod install`, and opened your project with its `PROJECT_NAME.xcworkspace` file.
 
@@ -12,12 +12,17 @@ For convenience, the list of integration steps once the SDK has been installed i
 1. Add `HomeTurf.plist` (structure below - specific values will be provided by HomeTurf)
 2. Update `Info.plist` with required values below
 3. Update `AppDelegate` for orientation locking support
-4. Update the ViewController that the app will launch from with a launch action
-5. (RECOMMENDED) Add Push Notification and Background Mode capabilities
-6. (OPTIONAL) If adding Auth0:
-   - Ensure that Podfile includes Auth0 dependency, and `pod install` again if needed
-   - Add Auth0Service that implements our BaseAuth0Service protocol (example provided)
-   - Update `HomeTurf.plist`, `Info.plist`, `AppDelegate` and view controller with additional required values
+4. Add `TeamHomeTurfOrientationUtility` file that implements our HomeTurfBaseOrientationUtility protocol
+5. Update the ViewController that the app will launch from with a launch action
+6. (RECOMMENDED) Add Push Notification and Background Mode capabilities
+
+(OPTIONAL) If adding Auth0:
+1. Ensure that Podfile includes Auth0 dependency, and `pod install` again if needed
+2. Add Auth0Service that implements our BaseAuth0Service protocol (example provided)
+3. Update `HomeTurf.plist` with required Auth0 values
+4. Update `Info.plist` with required Auth0 URL values
+5. Update `AppDelegate` with required import and method
+6. Update ViewController to use `TeamHomeTurfAuth0Service`
 
 ### Project Configuration Steps
 
@@ -71,7 +76,9 @@ Select your existing `Info.plist` in Xcode, Open as -> Source Code, and insert t
     }
 ```
 
-1. Add the following import and method to the View Controller where HomeTurf will be started from. This method will launch the HomeTurf app (assuming a navigation controller will be used) once connected to the button or other component that will launch the app:
+4. Add a `TeamHomeTurfOrientationUtility.swift` file to your project (and target membership), which you can copy from the HomeTurfSupport directory in our demo project [here](./TestSwiftStoryboardTeam/HomeTurfSupport/TeamHomeTurfOrientationUtility.swift).
+
+5. Add the following import and method to the View Controller where HomeTurf will be started from. This method will launch the HomeTurf app (assuming a navigation controller will be used) once connected to the button or other component that will launch the app:
 
 ```
 import HomeTurf
@@ -80,13 +87,15 @@ import HomeTurf
 
     @IBAction func navigateToHomeTurf(_ sender: Any) {
         let webViewVC = HomeTurfWebViewController.init()
+        let orientationUtility = TeamHomeTurfOrientationUtility.init()
+        webViewVC.setOrientationUtility(orientationUtility: orientationUtility)
         self.navigationController?.pushViewController(webViewVC, animated: true)
     }
 ```
 
 (Other methods such as modal presentation as possible, but using a navigation controller will provide the most immersive experience. If there is not already a navigation controller available, find the storyboard file for the view controller, select the View Controller in the scene and then Editor -> Embed In -> Navigation Controller.)
 
-5. If not already, make sure the following are checked in Signing & Capabilities:
+6. If not already, make sure the following are checked in Signing & Capabilities:
 
 - Audio, Airplay and Picture in Picture
 - Background fetch
@@ -176,6 +185,8 @@ import Auth0
 ```
     @IBAction func navigateToHomeTurf(_ sender: Any) {
         let webViewVC = HomeTurfWebViewController.init()
+        let orientationUtility = TeamHomeTurfOrientationUtility.init()
+        webViewVC.setOrientationUtility(orientationUtility: orientationUtility)
         let auth0Service = TeamHomeTurfAuth0Service.init()
         webViewVC.setAuth0Service(auth0Service: auth0Service)
         self.navigationController?.pushViewController(webViewVC, animated: true)
