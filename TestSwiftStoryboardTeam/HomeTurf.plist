@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>HomeTurfDomain</key>
-	<string>https://dev.hometurfapp.com:4200/</string>
+	<string>https://ci-app.hometurfapp.com/</string>
 	<key>HomeTurfTeamId</key>
-	<string>44169bb9-0f24-11e2-8525-18a905767e44</string>
+	<string>441766b9-0f24-11e2-8525-18a905767e44</string>
 	<key>HomeTurfUseNativeAuth0</key>
 	<false/>
 	<key>HomeTurfAuth0Domain</key>

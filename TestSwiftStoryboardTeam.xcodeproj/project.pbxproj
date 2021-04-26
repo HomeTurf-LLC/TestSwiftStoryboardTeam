@@ -14,6 +14,7 @@
 		1F4457D92625D85700E097FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4457D82625D85700E097FC /* Assets.xcassets */; };
 		1F4457DC2625D85700E097FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4457DA2625D85700E097FC /* LaunchScreen.storyboard */; };
 		1F4457F82625E20800E097FC /* HomeTurf.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F4457F72625E20800E097FC /* HomeTurf.plist */; };
+		1F79B68526375B250000A517 /* TeamHomeTurfOrientationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79B68426375B250000A517 /* TeamHomeTurfOrientationUtility.swift */; };
 		1FC10F8A26263F4C0067B396 /* TeamHomeTurfAuth0Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC10F8926263F4C0067B396 /* TeamHomeTurfAuth0Service.swift */; };
 		80C70F02CB29ED5D3E73DF94 /* Pods_TestSwiftStoryboardTeam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B114B09FE9C5B743132876 /* Pods_TestSwiftStoryboardTeam.framework */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		1F4457DD2625D85700E097FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F4457E82625DA8E00E097FC /* HomeTurf.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = HomeTurf.xcframework; path = Pods/HomeTurf/HomeTurf.xcframework; sourceTree = "<group>"; };
 		1F4457F72625E20800E097FC /* HomeTurf.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomeTurf.plist; sourceTree = "<group>"; };
+		1F79B68426375B250000A517 /* TeamHomeTurfOrientationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamHomeTurfOrientationUtility.swift; sourceTree = "<group>"; };
 		1FC10F8926263F4C0067B396 /* TeamHomeTurfAuth0Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamHomeTurfAuth0Service.swift; sourceTree = "<group>"; };
 		36B114B09FE9C5B743132876 /* Pods_TestSwiftStoryboardTeam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestSwiftStoryboardTeam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA49A28DD0F7F11F9BD0E51 /* Pods-TestSwiftStoryboardTeam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSwiftStoryboardTeam.release.xcconfig"; path = "Target Support Files/Pods-TestSwiftStoryboardTeam/Pods-TestSwiftStoryboardTeam.release.xcconfig"; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		1F4457CE2625D85400E097FC /* TestSwiftStoryboardTeam */ = {
 			isa = PBXGroup;
 			children = (
+				1F79B68126375B080000A517 /* HomeTurfSupport */,
 				1F4457F72625E20800E097FC /* HomeTurf.plist */,
 				1F4457CF2625D85400E097FC /* AppDelegate.swift */,
 				1F4457D12625D85400E097FC /* SceneDelegate.swift */,
@@ -76,9 +79,17 @@
 				1F4457D82625D85700E097FC /* Assets.xcassets */,
 				1F4457DA2625D85700E097FC /* LaunchScreen.storyboard */,
 				1F4457DD2625D85700E097FC /* Info.plist */,
-				1FC10F8926263F4C0067B396 /* TeamHomeTurfAuth0Service.swift */,
 			);
 			path = TestSwiftStoryboardTeam;
+			sourceTree = "<group>";
+		};
+		1F79B68126375B080000A517 /* HomeTurfSupport */ = {
+			isa = PBXGroup;
+			children = (
+				1FC10F8926263F4C0067B396 /* TeamHomeTurfAuth0Service.swift */,
+				1F79B68426375B250000A517 /* TeamHomeTurfOrientationUtility.swift */,
+			);
+			path = HomeTurfSupport;
 			sourceTree = "<group>";
 		};
 		55FB57FE2D2949079B70736B /* Pods */ = {
@@ -216,6 +227,7 @@
 			files = (
 				1F4457D42625D85400E097FC /* ViewController.swift in Sources */,
 				1FC10F8A26263F4C0067B396 /* TeamHomeTurfAuth0Service.swift in Sources */,
+				1F79B68526375B250000A517 /* TeamHomeTurfOrientationUtility.swift in Sources */,
 				1F4457D02625D85400E097FC /* AppDelegate.swift in Sources */,
 				1F4457D22625D85400E097FC /* SceneDelegate.swift in Sources */,
 			);
